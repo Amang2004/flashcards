@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Graffiti text effect */
+@keyframes flicker {
+  0%, 100% { text-shadow: 0 0 10px rgba(138, 92, 245, 0.8), 0 0 20px rgba(138, 92, 245, 0.5); }
+  50% { text-shadow: 0 0 15px rgba(138, 92, 245, 0.9), 0 0 25px rgba(138, 92, 245, 0.7); }
+}
+
+.text-primary {
+  animation: flicker 3s infinite alternate;
+}
+
+/* Add custom graffiti font if needed */
+@font-face {
+  font-family: 'Graffiti';
+  src: url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+} 
